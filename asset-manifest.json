@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/ToDo-on-hooks/static/css/main.0eb487e9.chunk.css",
-    "main.js": "/ToDo-on-hooks/static/js/main.6460d78c.chunk.js",
-    "main.js.map": "/ToDo-on-hooks/static/js/main.6460d78c.chunk.js.map",
+    "main.js": "/ToDo-on-hooks/static/js/main.6316f2ea.chunk.js",
+    "main.js.map": "/ToDo-on-hooks/static/js/main.6316f2ea.chunk.js.map",
     "runtime-main.js": "/ToDo-on-hooks/static/js/runtime-main.711effa4.js",
     "runtime-main.js.map": "/ToDo-on-hooks/static/js/runtime-main.711effa4.js.map",
-    "static/js/2.8ef53266.chunk.js": "/ToDo-on-hooks/static/js/2.8ef53266.chunk.js",
-    "static/js/2.8ef53266.chunk.js.map": "/ToDo-on-hooks/static/js/2.8ef53266.chunk.js.map",
+    "static/js/2.c6d74bff.chunk.js": "/ToDo-on-hooks/static/js/2.c6d74bff.chunk.js",
+    "static/js/2.c6d74bff.chunk.js.map": "/ToDo-on-hooks/static/js/2.c6d74bff.chunk.js.map",
     "index.html": "/ToDo-on-hooks/index.html",
     "static/css/main.0eb487e9.chunk.css.map": "/ToDo-on-hooks/static/css/main.0eb487e9.chunk.css.map",
-    "static/js/2.8ef53266.chunk.js.LICENSE.txt": "/ToDo-on-hooks/static/js/2.8ef53266.chunk.js.LICENSE.txt"
+    "static/js/2.c6d74bff.chunk.js.LICENSE.txt": "/ToDo-on-hooks/static/js/2.c6d74bff.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.711effa4.js",
-    "static/js/2.8ef53266.chunk.js",
+    "static/js/2.c6d74bff.chunk.js",
     "static/css/main.0eb487e9.chunk.css",
-    "static/js/main.6460d78c.chunk.js"
+    "static/js/main.6316f2ea.chunk.js"
   ]
 }
