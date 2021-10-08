@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
+
+import { checkSeconds, checkMinutes } from '../../utils/checkTime';
 
 const Timer = ({ min, sec }) => {
   const [started, setStarted] = useState(false);
@@ -18,21 +21,8 @@ const Timer = ({ min, sec }) => {
     let minutes = minutesLeft;
 
     const newTimer = setInterval(() => {
-      if (seconds !== '00') {
-        seconds -= 1;
-        if (seconds < 10) {
-          seconds = `0${seconds}`;
-        }
-      } else if (minutes !== '00' && seconds === '00') {
-        minutes -= 1;
-        seconds = 59;
-        if (minutes < 10) {
-          minutes = `0${minutes}`;
-        }
-      } else if (minutes === '00' && seconds === '00') {
-        clearInterval(timer);
-        setStarted(false);
-      }
+      seconds = checkSeconds(minutes, seconds);
+      minutes = checkMinutes(minutes, seconds, timer, setStarted);
 
       setMinutesLeft(minutes);
       setSecondsLeft(seconds);
@@ -47,14 +37,8 @@ const Timer = ({ min, sec }) => {
     clearInterval(timer);
   };
 
-  let classNamePlay = 'icon icon-play';
-  let classNamePause = 'icon icon-pause';
-
-  if (started) {
-    classNamePlay += ' hidden';
-  } else {
-    classNamePause += ' hidden';
-  }
+  const classNamePlay = cn('icon icon-play', { hidden: started });
+  const classNamePause = cn('icon icon-pause', { hidden: !started });
 
   return (
     <span className="description">

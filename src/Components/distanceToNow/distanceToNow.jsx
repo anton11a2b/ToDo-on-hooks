@@ -12,13 +12,15 @@ const DistanceToNow = ({ date }) => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTime(() =>
-        formatDistanceToNow(date, {
-          addSuffix: true,
-          includeSeconds: true,
-        })
+      setTime(
+        () =>
+          formatDistanceToNow(date, {
+            addSuffix: true,
+            includeSeconds: true,
+          }),
+        1000
       );
-    }, 1000);
+    });
 
     return () => clearInterval(timer);
   }, [date]);

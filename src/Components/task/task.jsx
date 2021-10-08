@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import DistanceToNow from '../distanceToNow/distanceToNow';
 import Timer from '../timer/timer';
 import './task.css';
@@ -16,19 +17,11 @@ const Task = ({ done, hidden, modified, onDeleted, onToggleDone, onToggleModifie
     onToggleModified();
   };
 
-  let className = '';
-
-  if (done) {
-    className += ' completed';
-  }
-
-  if (hidden) {
-    className += ' hidden';
-  }
-
-  if (modified) {
-    className += ' editing';
-  }
+  const className = cn({
+    completed: done,
+    hidden,
+    editing: modified,
+  });
 
   return (
     <li className={className}>

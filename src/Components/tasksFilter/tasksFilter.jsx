@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import './tasksFilter.css';
 
 const TasksFilter = ({ label, hasClass, selecteFilter }) => {
-  let className = '';
-
-  if (hasClass) {
-    className = 'selected';
-  }
+  const className = cn({
+    selected: hasClass,
+  });
 
   return (
     <button type="button" className={className} onClick={selecteFilter}>
